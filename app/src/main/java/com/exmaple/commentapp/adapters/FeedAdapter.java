@@ -1,6 +1,7 @@
 package com.exmaple.commentapp.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.text.format.DateUtils;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.exmaple.commentapp.CommentActivity;
 import com.exmaple.commentapp.R;
 import com.exmaple.commentapp.utils.SquareImageView;
 
@@ -60,6 +62,14 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
 
                 Glide.with(context).load("file:///android_asset/" + map.get("image")).into(userViewHolder.image);
 
+                userViewHolder.commentButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent i = new Intent(context, CommentActivity.class);
+                        i.putExtra("feedKey", ""+map.get("feedKey"));
+                        context.startActivity(i);
+                    }
+                });
 
             }
         }

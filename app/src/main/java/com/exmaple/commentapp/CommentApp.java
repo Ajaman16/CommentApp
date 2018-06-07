@@ -2,6 +2,8 @@ package com.exmaple.commentapp;
 
 import android.app.Application;
 
+import io.realm.Realm;
+
 public class CommentApp extends Application {
 
     public String userName = "";
@@ -9,6 +11,8 @@ public class CommentApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        Realm.init(this);
     }
 
     public String getUserName() {

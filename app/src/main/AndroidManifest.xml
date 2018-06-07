@@ -20,6 +20,9 @@
         </activity>
         <activity android:name=".FeedActivity"
             android:screenOrientation="portrait"></activity>
+
+        <activity android:name=".CommentActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

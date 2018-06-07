@@ -3,4 +3,11 @@
     <color name="colorPrimary">#FFF</color>
     <color name="colorPrimaryDark">#000</color>
     <color name="colorAccent">#000</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="textColor">#000</color>
+    <color name="grey">#bfbfbf</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="red">#e61010</color>
 </resources>
